@@ -241,7 +241,9 @@ function rS(){
   if(!sRef){a.innerHTML='';h2.style.display='block';rt.style.display='none';return}
   h2.style.display='none';rt.style.display='inline';rt.textContent='Referência: '+sRef.c+' — '+sRef.s;
   const n=parseInt(document.getElementById('ns').value);
-  const sd=STORES.map(p=>({...p,d:hav(sRef.lat,sRef.lng,p.lat,p.lng)})).sort((a,b)=>a.d-b.d).slice(0,n);
+  const sorted=STORES.map(p=>({...p,d:hav(sRef.lat,sRef.lng,p.lat,p.lng)})).sort((a,b)=>a.d-b.d);
+  const sameCity=sorted.filter(p=>p.city===sRef.c&&p.state===sRef.s).length;
+  const sd=sorted.slice(0,Math.max(n,sameCity));
   a.innerHTML='<div class="results">'+sd.map((p,i)=>`<div class="rc"><div style="flex:1;min-width:0"><div class="rrank">${i+1}° mais próximo</div><div class="rname">${h(p.storeName)}</div><div class="rcity">${h(p.city)} — ${h(p.state)}${p.address?' · '+h(p.address):''}</div>${p.phone?`<div class="rphone">&#128222; ${h(p.phone)}</div>`:''}</div><div style="flex-shrink:0"><div class="dkm">${p.d.toLocaleString('pt-BR')}</div><div class="dunit">km</div></div></div>`).join('')+'</div>'
 }
 function rL(){
