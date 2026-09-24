@@ -63,7 +63,7 @@ input[type=range]{width:90px;accent-color:var(--blue)}
     </div>
   </div>
   <div id="ra"></div>
-  <div id="sh" class="hint"><div class="hico">&#127757;</div><p>Digite sua cidade acima.<br>Os pontos serão ordenados pela distância (linha reta).</p></div>
+  <div id="sh" class="hint"><div class="hico">&#127757;</div><p>Digite sua cidade acima.<br>Os pontos serão ordenados pela distância (linha reta).<br><br>Se a sua cidade não aparecer, escolha a cidade grande mais próxima de você.</p></div>
 </div>
 <div id="tab-l" style="display:none">
   <div class="lfw"><input type="text" id="lf" placeholder="Filtrar por nome, cidade ou estado..." oninput="rL()"/></div>
@@ -239,7 +239,17 @@ const STORES=[
 {id:"d131",storeName:"Sik Construção - Pato Branco",city:"Pato Branco",state:"PR",lat:-26.2242,lng:-52.6694,address:"Av. das Torres, 183 - São Luiz",phone:"(46) 99908-2804"},
 {id:"d132",storeName:"Casa do Piscineiro",city:"Sorocaba",state:"SP",lat:-23.5015,lng:-47.4526,address:"R. Dr. Américo Figueiredo, 5689",phone:"(15) 99682-3900"},
 {id:"d133",storeName:"The Pool Piscinas",city:"Vinhedo",state:"SP",lat:-23.0294,lng:-46.975,address:"Rua Fábio Junqueira Meirelles, 640 - Capela",phone:"(11) 98441-8600"},
-{id:"d134",storeName:"L & L Piscinas",city:"Divinópolis",state:"MG",lat:-20.1386,lng:-44.8858,address:"Rua Goiás, 2310 - Ipiranga",phone:"(37) 9804-2990"}
+{id:"d134",storeName:"L & L Piscinas",city:"Divinópolis",state:"MG",lat:-20.1386,lng:-44.8858,address:"Rua Goiás, 2310 - Ipiranga",phone:"(37) 9804-2990"},
+{id:"d135",storeName:"Aditivos Petrópolis",city:"Petrópolis",state:"RJ",lat:-22.5050,lng:-43.1789,address:"Estr. União e Indústria, 13.786 - Itaipava",phone:"(24) 2222-4402"},
+{id:"d136",storeName:"Hidrojato Piscinas",city:"Passos",state:"MG",lat:-20.7186,lng:-46.6097,address:"Av. Juca Stockler, 1.810",phone:"(35) 3521-2211"},
+{id:"d137",storeName:"Acqua Station Piscinas",city:"Camboriú",state:"SC",lat:-27.0244,lng:-48.6533,address:"Rua Heitor Santos, 511 - Sala 02 - Centro",phone:"(47) 98832-3408"},
+{id:"d138",storeName:"Acquashow Construindo Seu Lazer",city:"São Mateus",state:"ES",lat:-18.7197,lng:-39.8581,address:"Rua Doutor Tancredo de Almeida Neves, 06 - Sernamby",phone:"(27) 99750-7174"},
+{id:"d139",storeName:"Gonçalves Piscinas / Aguazul",city:"Divinópolis",state:"MG",lat:-20.1386,lng:-44.8858,address:"Av. Paraná, 123 - Catalão",phone:"(37) 3512-9190"},
+{id:"d140",storeName:"MJ Piscinas",city:"Campos dos Goytacazes",state:"RJ",lat:-21.7625,lng:-41.3306,address:"Av. Senador José Carlos Pereira Pinto, 87 - Calabouço",phone:"(22) 99935-3056"},
+{id:"d141",storeName:"Stechsolar",city:"Lagoa Santa",state:"MG",lat:-19.6228,lng:-43.8997,address:"Av. Acadêmico Nilo Figueiredo, 620 - Centro",phone:"(31) 98848-8354"},
+{id:"d142",storeName:"Hidrasul",city:"Tijucas",state:"SC",lat:-27.2403,lng:-48.6325,address:"R. Euclídes Francisco Peixoto, 1470 - Santa Luzia",phone:"(48) 3380-0820"},
+{id:"d143",storeName:"SOS Piscinas - Rondonópolis",city:"Rondonópolis",state:"MT",lat:-16.4727,lng:-54.6358,address:"Av. Plínio Aguiar, 1106 - Res. Buriti",phone:"(66) 99611-7605"},
+{id:"d144",storeName:"HidroKiselar Banheira Spas e Equipamentos",city:"Jundiaí",state:"SP",lat:-23.1864,lng:-46.8964,address:"",phone:"(11) 94149-2036 / (11) 95330-7033"}
 ];
 let sRef=null,cTab='s';
 function h(s){return s?String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'):''}
